@@ -1,6 +1,6 @@
 <?php
 include 'exceldb.php';
-
+echo "JIT";
 if(isset($_POST["Import"])){
  
  
@@ -18,7 +18,7 @@ if(isset($_POST["Import"])){
   //It wiil insert a row to our subject table from our csv file`
 	           $sql = "INSERT into Faculty_Master(`faculty_name`,`faculty_father_name`,`faculty_surname`,`faculty_designation`,`faculty_mail_id`,`faculty_mobile`,`faculty_address`,`faculty_status`,`faculty_joining_date`,`o_id`) values('$emapData[1]','$emapData[2]','$emapData[3]','$emapData[4]','$emapData[5]','$emapData[6]','$emapData[7]','$emapData[8]','$emapData[9]','$emapData[10]')";
 	         //we are using mysql_query function. it returns a resource on true else False on error
-                echo "Qyery".$sql; 
+              //  echo "Qyery".$sql; 
 	          $result = mysqli_query($conn,$sql);
 	          echo $result;
 				if(!$result )
